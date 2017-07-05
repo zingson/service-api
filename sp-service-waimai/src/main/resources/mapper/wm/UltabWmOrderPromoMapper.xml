@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.UltabWmOrderPromoMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.UltabWmOrderPromo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="ORDER_ID" jdbcType="CHAR" property="orderId" />
+    <result column="ACT_ID" jdbcType="CHAR" property="actId" />
+    <result column="DISCOUNT_TYPE" jdbcType="DECIMAL" property="discountType" />
+    <result column="DISCOUNT_AMOUNT" jdbcType="DECIMAL" property="discountAmount" />
+    <result column="CHANNEL_RATE" jdbcType="DECIMAL" property="channelRate" />
+    <result column="SHOP_RATE" jdbcType="DECIMAL" property="shopRate" />
+    <result column="AGENT_RATE" jdbcType="DECIMAL" property="agentRate" />
+    <result column="LOGISTICS_RATE" jdbcType="DECIMAL" property="logisticsRate" />
+    <result column="DISCOUNT_DESC" jdbcType="CHAR" property="discountDesc" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>
