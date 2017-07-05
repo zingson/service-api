@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.WmChannelCateMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmChannelCate">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="CHANNEL_ID" jdbcType="CHAR" property="channelId" />
+    <result column="CHANNEL_CATE_ID" jdbcType="CHAR" property="channelCateId" />
+    <result column="CHANNEL_CATE_NAME" jdbcType="CHAR" property="channelCateName" />
+    <result column="CATE_ID" jdbcType="CHAR" property="cateId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmChannelCate">
+    insert into ULTAB_WM_CHANNEL_CATE (ORG_ID, MERC_ID, CHANNEL_ID, 
+      CHANNEL_CATE_ID, CHANNEL_CATE_NAME, CATE_ID
+      )
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{channelId,jdbcType=CHAR}, 
+      #{channelCateId,jdbcType=CHAR}, #{channelCateName,jdbcType=CHAR}, #{cateId,jdbcType=CHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, CHANNEL_ID, CHANNEL_CATE_ID, CHANNEL_CATE_NAME, CATE_ID
+    from ULTAB_WM_CHANNEL_CATE
+  </select>
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmChannelCate">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="CHANNEL_ID" jdbcType="CHAR" property="channelId" />
+    <result column="CHANNEL_CATE_ID" jdbcType="CHAR" property="channelCateId" />
+    <result column="CHANNEL_CATE_NAME" jdbcType="CHAR" property="channelCateName" />
+    <result column="CATE_ID" jdbcType="CHAR" property="cateId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmChannelCate">
+    insert into ULTAB_WM_CHANNEL_CATE (ORG_ID, MERC_ID, CHANNEL_ID, 
+      CHANNEL_CATE_ID, CHANNEL_CATE_NAME, CATE_ID
+      )
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{channelId,jdbcType=CHAR}, 
+      #{channelCateId,jdbcType=CHAR}, #{channelCateName,jdbcType=CHAR}, #{cateId,jdbcType=CHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, CHANNEL_ID, CHANNEL_CATE_ID, CHANNEL_CATE_NAME, CATE_ID
+    from ULTAB_WM_CHANNEL_CATE
+  </select>
+</mapper>

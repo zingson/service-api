@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.WmOrderPromoMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmOrderPromo">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="ORDER_ID" jdbcType="CHAR" property="orderId" />
+    <result column="ACT_ID" jdbcType="CHAR" property="actId" />
+    <result column="DISCOUNT_TYPE" jdbcType="DECIMAL" property="discountType" />
+    <result column="DISCOUNT_AMOUNT" jdbcType="DECIMAL" property="discountAmount" />
+    <result column="CHANNEL_RATE" jdbcType="DECIMAL" property="channelRate" />
+    <result column="SHOP_RATE" jdbcType="DECIMAL" property="shopRate" />
+    <result column="AGENT_RATE" jdbcType="DECIMAL" property="agentRate" />
+    <result column="LOGISTICS_RATE" jdbcType="DECIMAL" property="logisticsRate" />
+    <result column="DISCOUNT_DESC" jdbcType="CHAR" property="discountDesc" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmOrderPromo">
+    insert into ULTAB_WM_ORDER_PROMO (ORG_ID, MERC_ID, SHOP_ID, 
+      ORDER_ID, ACT_ID, DISCOUNT_TYPE, 
+      DISCOUNT_AMOUNT, CHANNEL_RATE, SHOP_RATE, 
+      AGENT_RATE, LOGISTICS_RATE, DISCOUNT_DESC, 
+      REMARK)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{orderId,jdbcType=CHAR}, #{actId,jdbcType=CHAR}, #{discountType,jdbcType=DECIMAL}, 
+      #{discountAmount,jdbcType=DECIMAL}, #{channelRate,jdbcType=DECIMAL}, #{shopRate,jdbcType=DECIMAL}, 
+      #{agentRate,jdbcType=DECIMAL}, #{logisticsRate,jdbcType=DECIMAL}, #{discountDesc,jdbcType=CHAR}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, ORDER_ID, ACT_ID, DISCOUNT_TYPE, DISCOUNT_AMOUNT, 
+    CHANNEL_RATE, SHOP_RATE, AGENT_RATE, LOGISTICS_RATE, DISCOUNT_DESC, REMARK
+    from ULTAB_WM_ORDER_PROMO
+  </select>
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmOrderPromo">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="ORDER_ID" jdbcType="CHAR" property="orderId" />
+    <result column="ACT_ID" jdbcType="CHAR" property="actId" />
+    <result column="DISCOUNT_TYPE" jdbcType="DECIMAL" property="discountType" />
+    <result column="DISCOUNT_AMOUNT" jdbcType="DECIMAL" property="discountAmount" />
+    <result column="CHANNEL_RATE" jdbcType="DECIMAL" property="channelRate" />
+    <result column="SHOP_RATE" jdbcType="DECIMAL" property="shopRate" />
+    <result column="AGENT_RATE" jdbcType="DECIMAL" property="agentRate" />
+    <result column="LOGISTICS_RATE" jdbcType="DECIMAL" property="logisticsRate" />
+    <result column="DISCOUNT_DESC" jdbcType="CHAR" property="discountDesc" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmOrderPromo">
+    insert into ULTAB_WM_ORDER_PROMO (ORG_ID, MERC_ID, SHOP_ID, 
+      ORDER_ID, ACT_ID, DISCOUNT_TYPE, 
+      DISCOUNT_AMOUNT, CHANNEL_RATE, SHOP_RATE, 
+      AGENT_RATE, LOGISTICS_RATE, DISCOUNT_DESC, 
+      REMARK)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{orderId,jdbcType=CHAR}, #{actId,jdbcType=CHAR}, #{discountType,jdbcType=DECIMAL}, 
+      #{discountAmount,jdbcType=DECIMAL}, #{channelRate,jdbcType=DECIMAL}, #{shopRate,jdbcType=DECIMAL}, 
+      #{agentRate,jdbcType=DECIMAL}, #{logisticsRate,jdbcType=DECIMAL}, #{discountDesc,jdbcType=CHAR}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, ORDER_ID, ACT_ID, DISCOUNT_TYPE, DISCOUNT_AMOUNT, 
+    CHANNEL_RATE, SHOP_RATE, AGENT_RATE, LOGISTICS_RATE, DISCOUNT_DESC, REMARK
+    from ULTAB_WM_ORDER_PROMO
+  </select>
+</mapper>

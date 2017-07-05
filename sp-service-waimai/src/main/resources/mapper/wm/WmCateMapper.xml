@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.WmCateMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmCate">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="CATE_ID" jdbcType="CHAR" property="cateId" />
+    <result column="CATE_NAME" jdbcType="CHAR" property="cateName" />
+    <result column="CATE_DESC" jdbcType="CHAR" property="cateDesc" />
+    <result column="IMG_URL" jdbcType="CHAR" property="imgUrl" />
+    <result column="IMG_HASH" jdbcType="CHAR" property="imgHash" />
+    <result column="IMG_ID" jdbcType="CHAR" property="imgId" />
+    <result column="PRIORITY" jdbcType="DECIMAL" property="priority" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmCate">
+    insert into ULTAB_WM_CATE (ORG_ID, MERC_ID, CATE_ID, 
+      CATE_NAME, CATE_DESC, IMG_URL, 
+      IMG_HASH, IMG_ID, PRIORITY)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{cateId,jdbcType=CHAR}, 
+      #{cateName,jdbcType=CHAR}, #{cateDesc,jdbcType=CHAR}, #{imgUrl,jdbcType=CHAR}, 
+      #{imgHash,jdbcType=CHAR}, #{imgId,jdbcType=CHAR}, #{priority,jdbcType=DECIMAL})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, CATE_ID, CATE_NAME, CATE_DESC, IMG_URL, IMG_HASH, IMG_ID, 
+    PRIORITY
+    from ULTAB_WM_CATE
+  </select>
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmCate">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="CATE_ID" jdbcType="CHAR" property="cateId" />
+    <result column="CATE_NAME" jdbcType="CHAR" property="cateName" />
+    <result column="CATE_DESC" jdbcType="CHAR" property="cateDesc" />
+    <result column="IMG_URL" jdbcType="CHAR" property="imgUrl" />
+    <result column="IMG_HASH" jdbcType="CHAR" property="imgHash" />
+    <result column="IMG_ID" jdbcType="CHAR" property="imgId" />
+    <result column="PRIORITY" jdbcType="DECIMAL" property="priority" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmCate">
+    insert into ULTAB_WM_CATE (ORG_ID, MERC_ID, CATE_ID, 
+      CATE_NAME, CATE_DESC, IMG_URL, 
+      IMG_HASH, IMG_ID, PRIORITY)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{cateId,jdbcType=CHAR}, 
+      #{cateName,jdbcType=CHAR}, #{cateDesc,jdbcType=CHAR}, #{imgUrl,jdbcType=CHAR}, 
+      #{imgHash,jdbcType=CHAR}, #{imgId,jdbcType=CHAR}, #{priority,jdbcType=DECIMAL})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, CATE_ID, CATE_NAME, CATE_DESC, IMG_URL, IMG_HASH, IMG_ID, 
+    PRIORITY
+    from ULTAB_WM_CATE
+  </select>
+</mapper>

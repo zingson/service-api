@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.WmTraceLogMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmTraceLog">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="CHANNEL_ID" jdbcType="CHAR" property="channelId" />
+    <result column="TRANS_TYPE" jdbcType="CHAR" property="transType" />
+    <result column="HOST_DATE" jdbcType="CHAR" property="hostDate" />
+    <result column="HOST_TIME" jdbcType="CHAR" property="hostTime" />
+    <result column="TERM_DATE" jdbcType="CHAR" property="termDate" />
+    <result column="TERM_TIME" jdbcType="CHAR" property="termTime" />
+    <result column="SESSION_ID" jdbcType="CHAR" property="sessionId" />
+    <result column="OPER_ID" jdbcType="CHAR" property="operId" />
+    <result column="REQUEST_MSG" jdbcType="VARCHAR" property="requestMsg" />
+    <result column="RESULT_MSG" jdbcType="VARCHAR" property="resultMsg" />
+    <result column="RETURN_CODE" jdbcType="CHAR" property="returnCode" />
+    <result column="RETURN_MSG" jdbcType="CHAR" property="returnMsg" />
+    <result column="HOST_RET_DATE" jdbcType="CHAR" property="hostRetDate" />
+    <result column="HOST_RET_TIME" jdbcType="CHAR" property="hostRetTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmTraceLog">
+    insert into ULTAB_WM_TRACE_LOG (ORG_ID, MERC_ID, SHOP_ID, 
+      CHANNEL_ID, TRANS_TYPE, HOST_DATE, 
+      HOST_TIME, TERM_DATE, TERM_TIME, 
+      SESSION_ID, OPER_ID, REQUEST_MSG, 
+      RESULT_MSG, RETURN_CODE, RETURN_MSG, 
+      HOST_RET_DATE, HOST_RET_TIME)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{channelId,jdbcType=CHAR}, #{transType,jdbcType=CHAR}, #{hostDate,jdbcType=CHAR}, 
+      #{hostTime,jdbcType=CHAR}, #{termDate,jdbcType=CHAR}, #{termTime,jdbcType=CHAR}, 
+      #{sessionId,jdbcType=CHAR}, #{operId,jdbcType=CHAR}, #{requestMsg,jdbcType=VARCHAR}, 
+      #{resultMsg,jdbcType=VARCHAR}, #{returnCode,jdbcType=CHAR}, #{returnMsg,jdbcType=CHAR}, 
+      #{hostRetDate,jdbcType=CHAR}, #{hostRetTime,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, CHANNEL_ID, TRANS_TYPE, HOST_DATE, HOST_TIME, TERM_DATE, 
+    TERM_TIME, SESSION_ID, OPER_ID, REQUEST_MSG, RESULT_MSG, RETURN_CODE, RETURN_MSG, 
+    HOST_RET_DATE, HOST_RET_TIME
+    from ULTAB_WM_TRACE_LOG
+  </select>
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmTraceLog">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="CHANNEL_ID" jdbcType="CHAR" property="channelId" />
+    <result column="TRANS_TYPE" jdbcType="CHAR" property="transType" />
+    <result column="HOST_DATE" jdbcType="CHAR" property="hostDate" />
+    <result column="HOST_TIME" jdbcType="CHAR" property="hostTime" />
+    <result column="TERM_DATE" jdbcType="CHAR" property="termDate" />
+    <result column="TERM_TIME" jdbcType="CHAR" property="termTime" />
+    <result column="SESSION_ID" jdbcType="CHAR" property="sessionId" />
+    <result column="OPER_ID" jdbcType="CHAR" property="operId" />
+    <result column="REQUEST_MSG" jdbcType="VARCHAR" property="requestMsg" />
+    <result column="RESULT_MSG" jdbcType="VARCHAR" property="resultMsg" />
+    <result column="RETURN_CODE" jdbcType="CHAR" property="returnCode" />
+    <result column="RETURN_MSG" jdbcType="CHAR" property="returnMsg" />
+    <result column="HOST_RET_DATE" jdbcType="CHAR" property="hostRetDate" />
+    <result column="HOST_RET_TIME" jdbcType="CHAR" property="hostRetTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmTraceLog">
+    insert into ULTAB_WM_TRACE_LOG (ORG_ID, MERC_ID, SHOP_ID, 
+      CHANNEL_ID, TRANS_TYPE, HOST_DATE, 
+      HOST_TIME, TERM_DATE, TERM_TIME, 
+      SESSION_ID, OPER_ID, REQUEST_MSG, 
+      RESULT_MSG, RETURN_CODE, RETURN_MSG, 
+      HOST_RET_DATE, HOST_RET_TIME)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{channelId,jdbcType=CHAR}, #{transType,jdbcType=CHAR}, #{hostDate,jdbcType=CHAR}, 
+      #{hostTime,jdbcType=CHAR}, #{termDate,jdbcType=CHAR}, #{termTime,jdbcType=CHAR}, 
+      #{sessionId,jdbcType=CHAR}, #{operId,jdbcType=CHAR}, #{requestMsg,jdbcType=VARCHAR}, 
+      #{resultMsg,jdbcType=VARCHAR}, #{returnCode,jdbcType=CHAR}, #{returnMsg,jdbcType=CHAR}, 
+      #{hostRetDate,jdbcType=CHAR}, #{hostRetTime,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, CHANNEL_ID, TRANS_TYPE, HOST_DATE, HOST_TIME, TERM_DATE, 
+    TERM_TIME, SESSION_ID, OPER_ID, REQUEST_MSG, RESULT_MSG, RETURN_CODE, RETURN_MSG, 
+    HOST_RET_DATE, HOST_RET_TIME
+    from ULTAB_WM_TRACE_LOG
+  </select>
+</mapper>

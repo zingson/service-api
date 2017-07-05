@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ul.biz.wm.mapper.WmPushLogMapper">
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmPushLog">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="TERM_SN" jdbcType="CHAR" property="termSn" />
+    <result column="CLIENT_ID" jdbcType="CHAR" property="clientId" />
+    <result column="PUSH_PLATE_ID" jdbcType="CHAR" property="pushPlateId" />
+    <result column="PUSH_PLATE_NAME" jdbcType="CHAR" property="pushPlateName" />
+    <result column="PUSH_DATE" jdbcType="CHAR" property="pushDate" />
+    <result column="PUSH_TIME" jdbcType="CHAR" property="pushTime" />
+    <result column="PUSH_STATUS" jdbcType="CHAR" property="pushStatus" />
+    <result column="PUSH_DATA" jdbcType="VARCHAR" property="pushData" />
+    <result column="TERM_TYPE" jdbcType="CHAR" property="termType" />
+    <result column="REMARK" jdbcType="CHAR" property="remark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmPushLog">
+    insert into ULTAB_WM_PUSH_LOG (ORG_ID, MERC_ID, SHOP_ID, 
+      TERM_SN, CLIENT_ID, PUSH_PLATE_ID, 
+      PUSH_PLATE_NAME, PUSH_DATE, PUSH_TIME, 
+      PUSH_STATUS, PUSH_DATA, TERM_TYPE, 
+      REMARK)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{termSn,jdbcType=CHAR}, #{clientId,jdbcType=CHAR}, #{pushPlateId,jdbcType=CHAR}, 
+      #{pushPlateName,jdbcType=CHAR}, #{pushDate,jdbcType=CHAR}, #{pushTime,jdbcType=CHAR}, 
+      #{pushStatus,jdbcType=CHAR}, #{pushData,jdbcType=VARCHAR}, #{termType,jdbcType=CHAR}, 
+      #{remark,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, TERM_SN, CLIENT_ID, PUSH_PLATE_ID, PUSH_PLATE_NAME, 
+    PUSH_DATE, PUSH_TIME, PUSH_STATUS, PUSH_DATA, TERM_TYPE, REMARK
+    from ULTAB_WM_PUSH_LOG
+  </select>
+  <resultMap id="BaseResultMap" type="com.ul.biz.wm.model.WmPushLog">
+    <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
+    <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
+    <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
+    <result column="TERM_SN" jdbcType="CHAR" property="termSn" />
+    <result column="CLIENT_ID" jdbcType="CHAR" property="clientId" />
+    <result column="PUSH_PLATE_ID" jdbcType="CHAR" property="pushPlateId" />
+    <result column="PUSH_PLATE_NAME" jdbcType="CHAR" property="pushPlateName" />
+    <result column="PUSH_DATE" jdbcType="CHAR" property="pushDate" />
+    <result column="PUSH_TIME" jdbcType="CHAR" property="pushTime" />
+    <result column="PUSH_STATUS" jdbcType="CHAR" property="pushStatus" />
+    <result column="PUSH_DATA" jdbcType="VARCHAR" property="pushData" />
+    <result column="TERM_TYPE" jdbcType="CHAR" property="termType" />
+    <result column="REMARK" jdbcType="CHAR" property="remark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ul.biz.wm.model.WmPushLog">
+    insert into ULTAB_WM_PUSH_LOG (ORG_ID, MERC_ID, SHOP_ID, 
+      TERM_SN, CLIENT_ID, PUSH_PLATE_ID, 
+      PUSH_PLATE_NAME, PUSH_DATE, PUSH_TIME, 
+      PUSH_STATUS, PUSH_DATA, TERM_TYPE, 
+      REMARK)
+    values (#{orgId,jdbcType=CHAR}, #{mercId,jdbcType=CHAR}, #{shopId,jdbcType=CHAR}, 
+      #{termSn,jdbcType=CHAR}, #{clientId,jdbcType=CHAR}, #{pushPlateId,jdbcType=CHAR}, 
+      #{pushPlateName,jdbcType=CHAR}, #{pushDate,jdbcType=CHAR}, #{pushTime,jdbcType=CHAR}, 
+      #{pushStatus,jdbcType=CHAR}, #{pushData,jdbcType=VARCHAR}, #{termType,jdbcType=CHAR}, 
+      #{remark,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ORG_ID, MERC_ID, SHOP_ID, TERM_SN, CLIENT_ID, PUSH_PLATE_ID, PUSH_PLATE_NAME, 
+    PUSH_DATE, PUSH_TIME, PUSH_STATUS, PUSH_DATA, TERM_TYPE, REMARK
+    from ULTAB_WM_PUSH_LOG
+  </select>
+</mapper>
