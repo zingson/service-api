@@ -45,5 +45,6 @@
 
     <import resource="classpath*:application-*.xml"></import>
 
+    <!--<bean class="com.ul.core.mybatis.StringTypeHandleRewrite" init-method="init"></bean>-->
 </beans>
 
