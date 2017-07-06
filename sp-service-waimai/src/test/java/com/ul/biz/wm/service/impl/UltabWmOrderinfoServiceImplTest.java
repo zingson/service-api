@@ -9,13 +9,10 @@ import com.ul.core.utils.UJson;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import tk.mybatis.mapper.entity.Condition;
-import tk.mybatis.mapper.entity.Example;
 
 
-import java.util.List;
+import javax.annotation.Resource;
 
 
 /**
@@ -23,8 +20,7 @@ import java.util.List;
  */
 public class UltabWmOrderinfoServiceImplTest extends BaseJunitTest {
 
-    @Autowired
-    @Qualifier("ultabWmOrderinfoServiceImpl")
+    @Resource(name="ultabWmOrderinfoServiceImpl")
     private UltabWmOrderinfoService ultabWmOrderinfoService;
 
     @Before
@@ -75,7 +71,9 @@ public class UltabWmOrderinfoServiceImplTest extends BaseJunitTest {
     public void findAll() throws Exception {
         PageHelper.startPage(1,5);
         Condition condition = new Condition(UltabWmOrderinfo.class);
-        condition.createCriteria().andEqualTo("shopName","宜芝多外卖（测试店3）");
+        //condition.createCriteria().andEqualTo("orderDate","20170111");
+        condition.createCriteria().andEqualTo("orderId","17011104504881029433");
+        //condition.createCriteria().andEqualTo("shopName","宜芝多外卖（测试店3）");
         Page<UltabWmOrderinfo> list = (Page<UltabWmOrderinfo>) ultabWmOrderinfoService.findByCondition(condition);
         System.out.println(list.getTotal());
         System.out.println(UJson.obj2json(list));
