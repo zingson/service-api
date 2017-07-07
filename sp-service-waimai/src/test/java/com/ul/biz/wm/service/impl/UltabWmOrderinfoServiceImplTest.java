@@ -69,10 +69,10 @@ public class UltabWmOrderinfoServiceImplTest extends BaseJunitTest {
 
     @Test
     public void findAll() throws Exception {
-        PageHelper.startPage(1,5);
+        PageHelper.startPage(0,5);
         Condition condition = new Condition(UltabWmOrderinfo.class);
         //condition.createCriteria().andEqualTo("orderDate","20170111");
-        condition.createCriteria().andEqualTo("orderId","17011104504881029433");
+        condition.createCriteria().andEqualTo("orderDate","20170111").andEqualTo("orderId","17011104504881029433");
         //condition.createCriteria().andEqualTo("shopName","宜芝多外卖（测试店3）");
         Page<UltabWmOrderinfo> list = (Page<UltabWmOrderinfo>) ultabWmOrderinfoService.findByCondition(condition);
         System.out.println(list.getTotal());

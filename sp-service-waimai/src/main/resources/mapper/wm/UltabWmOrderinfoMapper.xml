@@ -8,9 +8,9 @@
     <result column="ORG_ID" jdbcType="CHAR" property="orgId" />
     <result column="MERC_ID" jdbcType="CHAR" property="mercId" />
     <result column="SHOP_ID" jdbcType="CHAR" property="shopId" />
-    <result column="SHOP_NAME" jdbcType="CHAR" property="shopName" typeHandler="com.ul.core.mybatis.typehandler.OracleCharStringTypeHandler" />
+    <result column="SHOP_NAME" jdbcType="CHAR" property="shopName" javaType="String"  typeHandler="com.ul.core.mybatis.typehandler.OracleCharStringTypeHandler" />
     <result column="CHANNEL_ORDERID" jdbcType="CHAR" property="channelOrderid" />
-    <result column="ORDER_ID" jdbcType="CHAR" property="orderId" />
+    <result column="ORDER_ID" jdbcType="CHAR" property="orderId" javaType="String" typeHandler="com.ul.core.mybatis.typehandler.OracleCharStringTypeHandler" />
     <result column="VIEW_ORDER_ID" jdbcType="CHAR" property="viewOrderId" />
     <result column="TIMESTAMP" jdbcType="CHAR" property="timestamp" />
     <result column="ORDER_DATE" jdbcType="CHAR" property="orderDate" />

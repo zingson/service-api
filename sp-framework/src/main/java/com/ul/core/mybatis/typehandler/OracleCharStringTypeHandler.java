@@ -1,6 +1,7 @@
 package com.ul.core.mybatis.typehandler;
 
 import oracle.jdbc.driver.OraclePreparedStatement;
+import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.type.*;
 
 import java.sql.CallableStatement;
@@ -11,13 +12,12 @@ import java.sql.SQLException;
 /**
  * 自定义 TypeHandler 处理Oracle Char类型长度问题
  */
-@MappedTypes({String.class})
-@MappedJdbcTypes({JdbcType.CHAR})
 public class OracleCharStringTypeHandler extends StringTypeHandler {
 
     @Override
     public void setNonNullParameter(PreparedStatement ps, int i, String parameter, JdbcType jdbcType) throws SQLException {
         ps.unwrap(OraclePreparedStatement.class).setFixedCHAR(i, parameter);
+        //ParameterHandler
     }
 
     @Override

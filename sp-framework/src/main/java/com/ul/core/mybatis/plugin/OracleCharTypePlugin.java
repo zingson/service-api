@@ -13,12 +13,26 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-@Intercepts({@Signature(type = ResultSetHandler.class,method = "handleResultSets",args = {Statement.class})})
+
+@Intercepts({
+        @Signature(type = ResultSetHandler.class,method = "handleResultSets",args = {Statement.class}),
+        //@Signature(type = TypeHandler<T>.class,method = "setParameter",args = {PreparedStatement.class,Integer.class,})
+})
 public class OracleCharTypePlugin implements Interceptor {
 
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
+        /*Object arg = invocation.getArgs()[0];
+        if(PreparedStatement.class.equals(arg.getClass())){
+            PreparedStatement ps = (PreparedStatement) arg;
+            ps.unwrap(OraclePreparedStatement.class).setFixedCHAR(i, parameter);
+        }
+        Executor
+        if(Statement.class.equals(args[0].getClass())){
+
+        }
+        */
         List<?> list = (List<?>) invocation.proceed();
         for (Object obj : list) {
             if(obj instanceof Map){ continue; }

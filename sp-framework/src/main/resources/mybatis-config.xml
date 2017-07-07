@@ -18,7 +18,7 @@
 
     <typeHandlers>
         <!--Oracle CHAR fix  -->
-        <typeHandler handler="com.ul.core.mybatis.typehandler.OracleCharStringTypeHandler"/>
+        <typeHandler handler="com.ul.core.mybatis.typehandler.OracleCharStringTypeHandler" jdbcType="CHAR" javaType="String"/>
     </typeHandlers>
 
     <plugins>
